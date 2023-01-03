@@ -9,20 +9,20 @@ import { Link } from "react-router-dom";
 function PlanetsDetails() {
     const params = useParams();
     const { store, actions } = useContext(Context);
-    const { planet,favorites } = store;
+    const { planet, favorites } = store;
     useEffect(() => {
         actions.getPlanet(`https://www.swapi.tech/api/planets/${params.id}`);
     }// eslint-disable-next-line react-hooks/exhaustive-deps
-    , [])
+        , [])
     const getImgName = name => {
         return name.toLowerCase().split(" ").join("-") + ".jpg";
     };
     return (
         <div className="row bg-custom rounded-3 my-3">
-           { !!planet &&
-                planet.result.properties.name.split(" ").join("").toLowerCase()?
+            {!!planet &&
+                planet.result.properties.name.split(" ").join("").toLowerCase() ?
                 (
-                    <div className="card planet-details my-0 text-bg-dark border-light">
+                    <div className="card planet-details my-0 text-bg-dark">
                         <div className="row">
                             <div className="col-lg-6 col-sm-12 planet-details-img">
                                 <div className="row">
@@ -40,16 +40,17 @@ function PlanetsDetails() {
                                         </Link>
                                         {(favorites.indexOf(planet.result.properties.name) === -1) ?
                                             (
-                                                <div className="btn btn-outline-danger" onClick={()=>{
+                                                <div className="btn btn-outline-secondary" onClick={() => {
                                                     actions.addFavorite(planet.result.properties.name)
                                                 }}>
-                                                    {/* <AiOutlineHeart/> */}
+                                                    <i class="fa-regular fa-bookmark"></i>
+
                                                 </div>
                                             ) : (
-                                                <div className="btn btn-danger" onClick={()=>{
+                                                <div className="btn btn-secondary" onClick={() => {
                                                     actions.removeFavorite(planet.result.properties.name)
                                                 }}>
-                                                    {/* <AiFillHeart/> */}
+                                                    <i class="fa-solid fa-bookmark"></i>
                                                 </div>
                                             )}
                                     </div>

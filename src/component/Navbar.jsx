@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from '../store/appContext';
 
 const Navbar = () => {
+    const { store, actions } = useContext(Context);
+    const { favorites } = store;
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,8 +28,23 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/planets">Planets</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/favorites">My Favorites</Link>
+                            </li> */}
+                        </ul>
+                        <ul className="navbar-nav ms-auto">
+                            <li className="nav-item dropdown ">
+                                <a className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                    Favorites
+                                </a>
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+                                    {favorites.length > 0 ?
+                                        favorites.map((object, i) =>
+                                            <li key={i}><div className="d-flex justify-content-between m-2"><span>{object}</span><i className="fas fa-times p-2" onClick={() => actions.removeFavorite(object)}></i></div></li>)
+                                        :
+                                        <li><div className="d-flex justify-content-between m-2"><span>Empty List</span></div></li>
+                                    }
+                                </ul>
                             </li>
                         </ul>
                     </div>

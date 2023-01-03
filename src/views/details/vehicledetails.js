@@ -39,16 +39,16 @@ function VehicleDetails(){
                                         </Link>
                                         {(favorites.indexOf(vehicle.result.properties.name) === -1) ?
                                             (
-                                                <div className="btn btn-outline-danger" onClick={()=>{
+                                                <div className="btn btn-outline-secondary" onClick={()=>{
                                                     actions.addFavorite(vehicle.result.properties.name)
                                                 }}>
-                                                    {/* <AiOutlineHeart/> */}
+                                                    <i class="fa-regular fa-bookmark"></i>
                                                 </div>
                                             ) : (
-                                                <div className="btn btn-danger" onClick={()=>{
+                                                <div className="btn btn-secondary" onClick={()=>{
                                                     actions.removeFavorite(vehicle.result.properties.name)
                                                 }}>
-                                                    {/* <AiFillHeart/> */}
+                                                    <i class="fa-solid fa-bookmark"></i>
                                                 </div>
                                             )}
                                     </div>
@@ -68,8 +68,6 @@ function VehicleDetails(){
                                         <li className="list-group-item d-flex justify-content-between"><span>Crew:</span> <span>{vehicle.result.properties.crew}</span></li>
                                         <li className="list-group-item d-flex justify-content-between"><span>Passengers:</span> <span>{vehicle.result.properties.passengers}</span></li>
                                         <li className="list-group-item d-flex justify-content-between"><span>Max atmosphering speed:</span><span>{vehicle.result.properties.max_atmosphering_speed}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Hyperdrive rating:</span><span>{vehicle.result.properties.hyperdrive_rating}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>MGLT:</span><span>{vehicle.result.properties.MGLT}</span></li>
                                         <li className="list-group-item d-flex justify-content-between"><span>Cargo capacity:</span><span>{vehicle.result.properties.cargo_capacity}</span></li>
                                         <li className="list-group-item d-flex justify-content-between"><span>Consumables:</span><span>{vehicle.result.properties.consumables}</span></li>
                                     </ul>

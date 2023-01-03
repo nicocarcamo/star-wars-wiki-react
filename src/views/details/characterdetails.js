@@ -39,16 +39,16 @@ function CharacterDetails() {
                                         </Link>
                                         {(favorites.indexOf(character.data.result.properties.name) === -1) ?
                                             (
-                                                <div className="btn btn-outline-danger" onClick={()=>{
+                                                <div className="btn btn-outline-secondary" onClick={() => {
                                                     actions.addFavorite(character.data.result.properties.name)
                                                 }}>
-                                                    {/* <AiOutlineHeart/> */}
+                                                    <i class="fa-regular fa-bookmark"></i>
                                                 </div>
                                             ) : (
-                                                <div className="btn btn-danger" onClick={()=>{
+                                                <div className="btn btn-secondary" onClick={() => {
                                                     actions.removeFavorite(character.data.result.properties.name)
                                                 }}>
-                                                    {/* <AiFillHeart/> */}
+                                                    <i class="fa-solid fa-bookmark"></i>
                                                 </div>
                                             )}
                                     </div>

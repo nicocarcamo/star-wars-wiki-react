@@ -148,13 +148,13 @@ const getState = ({ getStore, getActions, setStore }) => {
             addFavorite: (element) => {
                 let { favorites } = getStore();
                 favorites.push(element);
-                setStore({ 
+                setStore({
                     favorites
-                 });
+                });
             },
             removeFavorite: (element) => {
                 let { favorites } = getStore();
-                let newFavorites = favorites.filter(item=>item!==element);
+                let newFavorites = favorites.filter(item => item !== element);
                 setStore({
                     favorites: newFavorites
                 });
