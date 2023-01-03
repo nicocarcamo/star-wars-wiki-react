@@ -9,9 +9,9 @@ const Card = (props) => {
         props.elements &&
         props.elements.results.map((element, index) => (
             <div className="col-md-4" id={"char_" + index} key={index} >
-                <div className="card my-3 shadow animate__bounceIn animate__faster">
+                <div className="card my-3 border-light text-bg-dark">
                     <img
-                        src={`img/${props.route}/${getImgName(element.name)}`}
+                        src={`img/${props.imgroute}/${getImgName(element.name)}`}
                         className="card-img-top" alt={`img of ${element.name}`}
                     />
                     <div className="card-body">
@@ -20,9 +20,9 @@ const Card = (props) => {
                         </h4>
                     </div>
                     <div className="card-footer d-flex justify-content-around">
-                        <Link to={`${props.route}/${element.name.split(" ").join("").toLowerCase()}/${element.uid}`}>
-                            <button type="button" className="btn btn-outline-dark" >
-                                Read more
+                        <Link to={`${element.name.split(" ").join("").toLowerCase()}/${element.uid}`}>
+                            <button type="button" className="btn btn-secondary" >
+                                Details
                             </button>
                         </Link>
                     </div>

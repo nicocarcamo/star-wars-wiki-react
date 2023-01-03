@@ -9,6 +9,9 @@ import { Favorites } from "./views/favorites";
 import injectContext from "./store/appContext";
 import Navbar from "./component/Navbar.jsx";
 import Footer from "./component/Footer.jsx";
+import PlanetsDetails from './views/details/planetdetails';
+import VehicleDetails from './views/details/vehicledetails';
+import CharacterDetails from './views/details/characterdetails';
 
 
 function Layout() {
@@ -26,6 +29,9 @@ function Layout() {
 						<Route path="/vehicles" element={<Vehicles />} />
 						<Route path="/planets" element={<Planets />} />
 						<Route path="/favorites" element={<Favorites />} />
+						<Route path="/planets/:name/:id" element={<PlanetsDetails />} />
+						<Route path="/characters/:name/:id" element={<CharacterDetails />} />
+						<Route path="/vehicles/:name/:id" element={<VehicleDetails />} />
 						<Route path="*" element={<h1>Not found, may the force be with you...</h1>} />
 					</Routes>
 					<Footer />

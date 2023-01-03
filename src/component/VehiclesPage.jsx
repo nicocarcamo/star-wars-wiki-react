@@ -41,7 +41,7 @@ const VehiclesPage = () => {
             <div className="row bg-custom rounded-3 py-1">
                 {
                     !!vehicles ?
-                        <Card elements={vehicles} route="vehicles" />
+                        <Card elements={vehicles} imgroute="vehicles" urlroute="vehicles" />
                         :
                         <Spinner />
                 }

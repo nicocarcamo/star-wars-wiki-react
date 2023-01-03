@@ -43,7 +43,7 @@ const PlanetsPage = () => {
             <div className="row bg-custom rounded-3 py-1">
                 {
                     !!planets ?
-                        <Card elements={planets} route="planets" />
+                        <Card elements={planets} imgroute="planets" urlroute="planets" />
                         :
                         <Spinner />
                 }
