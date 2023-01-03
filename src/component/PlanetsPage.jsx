@@ -1,6 +1,6 @@
 import React from "react";
-import { useContext, useState } from 'react'; // eslint-disable-next-line
-import { Context } from '../store/appContext'; // eslint-disable-next-line
+import { useContext, useState } from 'react';
+import { Context } from '../store/appContext';
 import Pagination from 'react-js-pagination';
 import Card from './Card.jsx';
 import Spinner from './Spinner.jsx';

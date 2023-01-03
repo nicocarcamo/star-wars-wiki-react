@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Characters } from "./views/characters";
 import { Planets } from "./views/planets";
 import { Vehicles } from "./views/vehicles";
-// import { Favorites } from "./views/favorites";
+import ScrollToTop from "./component/scrollToTop";
 import injectContext from "./store/appContext";
 import Navbar from "./component/Navbar.jsx";
 import Footer from "./component/Footer.jsx";
@@ -28,7 +27,6 @@ function Layout() {
 						<Route path="/characters" element={<Characters />} />
 						<Route path="/vehicles" element={<Vehicles />} />
 						<Route path="/planets" element={<Planets />} />
-						{/* <Route path="/favorites" element={<Favorites />} /> */}
 						<Route path="/planets/:name/:id" element={<PlanetsDetails />} />
 						<Route path="/characters/:name/:id" element={<CharacterDetails />} />
 						<Route path="/vehicles/:name/:id" element={<VehicleDetails />} />

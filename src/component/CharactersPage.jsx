@@ -15,7 +15,7 @@ const CharactersPage = () => {
         actions.getPeople(`https://www.swapi.tech/api/people/?page=${pageNumber}&limit=9`);
     };
     return (
-        <div className="row ">
+        <div className="row">
             <div className="row mt-2">
                 <div
                     className="col-md-12 d-flex align-content-center">

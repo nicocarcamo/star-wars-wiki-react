@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { Context } from "../../store/appContext";
 import Spinner from "../../component/Spinner";
 import { Link } from "react-router-dom";
-// import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai';
 
 
 function PlanetsDetails() {
@@ -12,19 +11,19 @@ function PlanetsDetails() {
     const { planet, favorites } = store;
     useEffect(() => {
         actions.getPlanet(`https://www.swapi.tech/api/planets/${params.id}`);
-    }// eslint-disable-next-line react-hooks/exhaustive-deps
+    }
         , [])
     const getImgName = name => {
         return name.toLowerCase().split(" ").join("-") + ".jpg";
     };
     return (
-        <div className="row bg-custom rounded-3 my-3">
+        <div className="row bg-custom rounded-3 m-3">
             {!!planet &&
                 planet.result.properties.name.split(" ").join("").toLowerCase() ?
                 (
-                    <div className="card planet-details my-0 text-bg-dark">
+                    <div className="card my-0 text-bg-dark border-light">
                         <div className="row">
-                            <div className="col-lg-6 col-sm-12 planet-details-img">
+                            <div className="col-lg-6 col-sm-12">
                                 <div className="row">
                                     <img
                                         src={`/img/planets/${getImgName(planet.result.properties.name)}`}
@@ -35,7 +34,7 @@ function PlanetsDetails() {
                                     <div className="d-flex justify-content-around py-3">
                                         <Link to="/planets" className="btn-link">
                                             <button type="button" className="btn btn-secondary" >
-                                                Back to planets
+                                                Back To Planets
                                             </button>
                                         </Link>
                                         {(favorites.indexOf(planet.result.properties.name) === -1) ?
@@ -43,14 +42,14 @@ function PlanetsDetails() {
                                                 <div className="btn btn-outline-secondary" onClick={() => {
                                                     actions.addFavorite(planet.result.properties.name)
                                                 }}>
-                                                    <i class="fa-regular fa-bookmark"></i>
+                                                    <i className="fa-regular fa-bookmark"></i>
 
                                                 </div>
                                             ) : (
                                                 <div className="btn btn-secondary" onClick={() => {
                                                     actions.removeFavorite(planet.result.properties.name)
                                                 }}>
-                                                    <i class="fa-solid fa-bookmark"></i>
+                                                    <i className="fa-solid fa-bookmark"></i>
                                                 </div>
                                             )}
                                     </div>

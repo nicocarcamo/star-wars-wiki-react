@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         props.elements &&
         props.elements.results.map((element, index) => (
-            <div className="col-md-4" id={"char_" + index} key={index} >
+            <div className="col-md-4" key={index} >
                 <div className="card my-3 border-light text-bg-dark">
                     <img
                         src={`img/${props.imgroute}/${getImgName(element.name)}`}

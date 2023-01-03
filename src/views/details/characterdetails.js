@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { Context } from "../../store/appContext";
 import Spinner from "../../component/Spinner";
 import { Link } from "react-router-dom";
-// import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai';
 
 function CharacterDetails() {
     const params = useParams();
@@ -11,19 +10,19 @@ function CharacterDetails() {
     const { character, favorites } = store;
     useEffect(() => {
         actions.getCharacter(`https://www.swapi.tech/api/people/${params.id}`);
-    }// eslint-disable-next-line react-hooks/exhaustive-deps
+    }
         , [])
     const getImgName = name => {
         return name.toLowerCase().split(" ").join("-") + ".jpg";
     };
     return (
-        <div className="row bg-custom rounded-3 my-3">
+        <div className="row bg-custom rounded-3 m-3">
             {!!character &&
                 character.data.result.properties.name.split(" ").join("").toLowerCase() === params.name ?
                 (
-                    <div className="card character-details my-0 text-bg-dark border-light">
+                    <div className="card my-0 text-bg-dark border-light">
                         <div className="row">
-                            <div className="col-lg-6 col-sm-12 character-details-img">
+                            <div className="col-lg-6 col-sm-12">
                                 <div className="row">
                                     <img
                                         src={`/img/people/${getImgName(character.data.result.properties.name)}`}
@@ -34,7 +33,7 @@ function CharacterDetails() {
                                     <div className="d-flex justify-content-around py-3">
                                         <Link to="/characters" className="btn-link">
                                             <button type="button" className="btn btn-secondary" >
-                                                Back to characters
+                                                Back To Characters
                                             </button>
                                         </Link>
                                         {(favorites.indexOf(character.data.result.properties.name) === -1) ?
@@ -42,13 +41,13 @@ function CharacterDetails() {
                                                 <div className="btn btn-outline-secondary" onClick={() => {
                                                     actions.addFavorite(character.data.result.properties.name)
                                                 }}>
-                                                    <i class="fa-regular fa-bookmark"></i>
+                                                    <i className="fa-regular fa-bookmark"></i>
                                                 </div>
                                             ) : (
                                                 <div className="btn btn-secondary" onClick={() => {
                                                     actions.removeFavorite(character.data.result.properties.name)
                                                 }}>
-                                                    <i class="fa-solid fa-bookmark"></i>
+                                                    <i className="fa-solid fa-bookmark"></i>
                                                 </div>
                                             )}
                                     </div>

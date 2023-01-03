@@ -28,12 +28,9 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/planets">Planets</Link>
                             </li>
-                            {/* <li className="nav-item">
-                                <Link className="nav-link" to="/favorites">My Favorites</Link>
-                            </li> */}
                         </ul>
                         <ul className="navbar-nav ms-auto">
-                            <li className="nav-item dropdown ">
+                            <li className="nav-item dropdown">
                                 <a className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     Favorites
                                 </a>
