@@ -31,9 +31,9 @@ const Navbar = () => {
                         </ul> 
                         <ul className="navbar-nav ms-auto"> 
                              <li className="nav-item dropdown"> 
-                                <a className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                <button className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     Favorites
-                                </a>
+                                </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
                                     {favorites.length > 0 ?
                                         favorites.map((object, i) =>
