@@ -10,7 +10,7 @@ function CharacterDetails() {
     const { character, favorites } = store;
     useEffect(() => {
         actions.getCharacter(`https://www.swapi.tech/api/people/${params.id}`);
-    }
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
         , [])
     const getImgName = name => {
         return name.toLowerCase().split(" ").join("-") + ".jpg";
@@ -32,19 +32,19 @@ function CharacterDetails() {
                                 <div className="row">
                                     <div className="d-flex justify-content-around py-3">
                                         <Link to="/characters" className="btn-link">
-                                            <button type="button" className="btn btn-secondary" >
+                                            <button type="button" className="btn btn-warning" >
                                                 Back To Characters
                                             </button>
                                         </Link>
                                         {(favorites.indexOf(character.data.result.properties.name) === -1) ?
                                             (
-                                                <div className="btn btn-outline-secondary" onClick={() => {
+                                                <div className="btn btn-outline-warning" onClick={() => {
                                                     actions.addFavorite(character.data.result.properties.name)
                                                 }}>
                                                     <i className="fa-regular fa-bookmark"></i>
                                                 </div>
                                             ) : (
-                                                <div className="btn btn-secondary" onClick={() => {
+                                                <div className="btn btn-warning" onClick={() => {
                                                     actions.removeFavorite(character.data.result.properties.name)
                                                 }}>
                                                     <i className="fa-solid fa-bookmark"></i>

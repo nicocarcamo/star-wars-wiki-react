@@ -8,7 +8,7 @@ export const Characters = () => {
         <div className="characters h-100 w-75 m-auto">
             <CharactersPage />
 			<Link to="/">
-				<button className="btn btn-secondary">Back Home</button>
+				<button className="btn btn-warning">Back Home</button>
 			</Link>
 		</div>
 	);

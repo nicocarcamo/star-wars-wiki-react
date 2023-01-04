@@ -9,7 +9,7 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="w-75 m-auto d-flex">
-                    <Link className="navbar-brand ms-3" to="/">STAR WARS WIKI</Link>
+                    <Link className="navbar-brand me-3 fw-bold" to="/">STAR WARS WIKI</Link>
                     <button className="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -28,9 +28,9 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/planets">Planets</Link>
                             </li>
-                        </ul>
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item dropdown">
+                        </ul> 
+                        <ul className="navbar-nav ms-auto"> 
+                             <li className="nav-item dropdown"> 
                                 <a className="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     Favorites
                                 </a>

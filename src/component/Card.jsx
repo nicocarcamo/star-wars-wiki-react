@@ -21,7 +21,7 @@ const Card = (props) => {
                     </div>
                     <div className="card-footer d-flex justify-content-around">
                         <Link to={`${element.name.split(" ").join("").toLowerCase()}/${element.uid}`}>
-                            <button type="button" className="btn btn-secondary" >
+                            <button type="button" className="btn btn-warning" >
                                 Details
                             </button>
                         </Link>

@@ -11,7 +11,7 @@ function PlanetsDetails() {
     const { planet, favorites } = store;
     useEffect(() => {
         actions.getPlanet(`https://www.swapi.tech/api/planets/${params.id}`);
-    }
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
         , [])
     const getImgName = name => {
         return name.toLowerCase().split(" ").join("-") + ".jpg";
@@ -33,20 +33,20 @@ function PlanetsDetails() {
                                 <div className="row">
                                     <div className="d-flex justify-content-around py-3">
                                         <Link to="/planets" className="btn-link">
-                                            <button type="button" className="btn btn-secondary" >
+                                            <button type="button" className="btn btn-warning" >
                                                 Back To Planets
                                             </button>
                                         </Link>
                                         {(favorites.indexOf(planet.result.properties.name) === -1) ?
                                             (
-                                                <div className="btn btn-outline-secondary" onClick={() => {
+                                                <div className="btn btn-outline-warning" onClick={() => {
                                                     actions.addFavorite(planet.result.properties.name)
                                                 }}>
                                                     <i className="fa-regular fa-bookmark"></i>
 
                                                 </div>
                                             ) : (
-                                                <div className="btn btn-secondary" onClick={() => {
+                                                <div className="btn btn-warning" onClick={() => {
                                                     actions.removeFavorite(planet.result.properties.name)
                                                 }}>
                                                     <i className="fa-solid fa-bookmark"></i>
