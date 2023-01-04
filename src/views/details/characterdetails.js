@@ -59,14 +59,14 @@ function CharacterDetails() {
                                         {character.data.result.properties.name}
                                     </h3>
                                     <ul className="list-group text-center shadow">
-                                        <li className="list-group-item d-flex justify-content-between"><span>Gender:</span> <span>{character.data.result.properties.gender}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Height:</span> <span>{character.data.result.properties.height}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Mass:</span> <span>{character.data.result.properties.mass}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Hair color:</span> <span>{character.data.result.properties.hair_color}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Skin color:</span> <span>{character.data.result.properties.skin_color}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Eye color:</span> <span>{character.data.result.properties.eye_color}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Birth year:</span> <span>{character.data.result.properties.birth_year}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Homeworld:</span>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Gender:</span> <span>{character.data.result.properties.gender}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Height:</span> <span>{character.data.result.properties.height}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Mass:</span> <span>{character.data.result.properties.mass}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Hair color:</span> <span>{character.data.result.properties.hair_color}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Skin color:</span> <span>{character.data.result.properties.skin_color}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Eye color:</span> <span>{character.data.result.properties.eye_color}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Birth year:</span> <span>{character.data.result.properties.birth_year}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Homeworld:</span>
                                             {!!character.planet ?
                                                 <Link className="text-info" to={`/planets/${character.planet.result.properties.name.split(" ").join("").toLowerCase()}/${character.planet.result.uid}`}>
                                                     {character.planet.result.properties.name}

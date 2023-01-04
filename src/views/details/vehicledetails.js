@@ -59,16 +59,16 @@ function VehicleDetails(){
                                         {vehicle.result.properties.name}
                                     </h3>
                                     <ul className="list-group text-center shadow">
-                                        <li className="list-group-item d-flex justify-content-between"><span>Model:</span> <span>{vehicle.result.properties.model}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Vehicle Class:</span> <span>{vehicle.result.properties.vehicle_class}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Manufacturer:</span> <span>{vehicle.result.properties.manufacturer}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Cost in credits:</span> <span>{vehicle.result.properties.cost_in_credits}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Length:</span> <span>{vehicle.result.properties.length}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Crew:</span> <span>{vehicle.result.properties.crew}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Passengers:</span> <span>{vehicle.result.properties.passengers}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Max atmosphering speed:</span><span>{vehicle.result.properties.max_atmosphering_speed}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Cargo capacity:</span><span>{vehicle.result.properties.cargo_capacity}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Consumables:</span><span>{vehicle.result.properties.consumables}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Model:</span> <span>{vehicle.result.properties.model}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Vehicle Class:</span> <span>{vehicle.result.properties.vehicle_class}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Manufacturer:</span> <span>{vehicle.result.properties.manufacturer}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Cost in credits:</span> <span>{vehicle.result.properties.cost_in_credits}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Length:</span> <span>{vehicle.result.properties.length}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Crew:</span> <span>{vehicle.result.properties.crew}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Passengers:</span> <span>{vehicle.result.properties.passengers}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Max atmosphering speed:</span><span>{vehicle.result.properties.max_atmosphering_speed}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Cargo capacity:</span><span>{vehicle.result.properties.cargo_capacity}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Consumables:</span><span>{vehicle.result.properties.consumables}</span></li>
                                     </ul>
                                 </div>
                             </div>

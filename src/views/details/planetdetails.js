@@ -61,14 +61,14 @@ function PlanetsDetails() {
                                         {planet.result.properties.name}
                                     </h3>
                                     <ul className="list-group text-center shadow">
-                                        <li className="list-group-item d-flex justify-content-between"><span>Climate:</span> <span>{planet.result.properties.climate}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Diameter:</span> <span>{planet.result.properties.diameter}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Gravity:</span> <span>{planet.result.properties.gravity}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Orbital Period:</span> <span>{planet.result.properties.orbital_period}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Population:</span> <span>{planet.result.properties.population}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Rotation Period:</span> <span>{planet.result.properties.rotation_period}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Surface water:</span> <span>{planet.result.properties.surface_water}</span></li>
-                                        <li className="list-group-item d-flex justify-content-between"><span>Terrain:</span><span>{planet.result.properties.terrain}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Climate:</span> <span>{planet.result.properties.climate}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Diameter:</span> <span>{planet.result.properties.diameter}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Gravity:</span> <span>{planet.result.properties.gravity}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Orbital Period:</span> <span>{planet.result.properties.orbital_period}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Population:</span> <span>{planet.result.properties.population}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Rotation Period:</span> <span>{planet.result.properties.rotation_period}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Surface water:</span> <span>{planet.result.properties.surface_water}</span></li>
+                                        <li className="list-group-item list-group-item-dark d-flex justify-content-between"><span>Terrain:</span><span>{planet.result.properties.terrain}</span></li>
                                     </ul>
                                 </div>
                             </div>
